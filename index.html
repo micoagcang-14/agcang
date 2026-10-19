@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feather & Flock Co. | Heritage Chicken Breeds & Care Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { emerald: { 800: '#064e3b', 900: '#022c22' }, amber: { 500: '#f59e0b', 600: '#d97706' }, cream: '#FAF7F2' }, fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], serif: ['Merriweather', 'serif'] } } } }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAF7F2; color: #1f2937; }
+        .glass-header { background: rgba(250, 247, 242, 0.90); backdrop-filter: blur(12px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .article-body p { margin-bottom: 1.25rem; line-height: 1.8; color: #374151; }
+        .article-body h3 { font-size: 1.25rem; font-weight: 700; color: #064e3b; margin-top: 1.75rem; margin-bottom: 0.75rem; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+    <div class="bg-emerald-900 text-amber-300 text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide"><i class="fa-solid fa-book-open-reader mr-2"></i> Free Educational Resource & Market Pricing Index for Heritage Poultry Keepers</div>
+    <header class="sticky top-0 z-40 glass-header border-b border-amber-900/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="navigateTo('home')">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-800 flex items-center justify-center text-amber-400 text-2xl shadow-md shadow-emerald-900/20"><i class="fa-solid fa-feather-pointed"></i></div>
+                    <div><span class="text-xl font-extrabold text-emerald-950 tracking-tight block leading-none">Feather & Flock</span><span class="text-xs text-amber-600 font-semibold tracking-wider uppercase">Poultry Journal & Directory</span></div>
+                </div>
+                <nav class="hidden xl:flex items-center space-x-8">
+                    <button onclick="navigateTo('home')" class="font-semibold text-gray-700 hover:text-emerald-800 transition-colors">Home</button>
+                    <button onclick="navigateTo('articles')" class="font-semibold text-gray-700 hover:text-emerald-800 transition-colors">Guides & Articles</button>
+                    <button onclick="navigateTo('directory')" class="font-semibold text-gray-700 hover:text-emerald-800 transition-colors">Breed Directory & Pricing</button>
+                    <button onclick="navigateTo('why-us')" class="font-semibold text-gray-700 hover:text-emerald-800 transition-colors">About Us</button>
+                </nav>
+                <div class="flex items-center space-x-3">
+                    <button onclick="navigateTo('directory'); focusSearch();" class="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-800/10 text-emerald-900 hover:bg-emerald-800 hover:text-white font-semibold text-xs sm:text-sm transition-all border border-emerald-800/20"><i class="fa-solid fa-magnifying-glass"></i><span>Search Breeds</span></button>
+                    <button onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false" class="xl:hidden p-2 rounded-lg text-emerald-900 hover:bg-emerald-100"><i class="fa-solid fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden xl:hidden border-t border-gray-200 bg-cream px-4 pt-3 pb-6 space-y-3">
+            <button onclick="navigateTo('home'); toggleMobileMenu();" class="block w-full text-left py-2 font-semibold text-gray-800 hover:text-emerald-800">Home</button>
+            <button onclick="navigateTo('articles'); toggleMobileMenu();" class="block w-full text-left py-2 font-semibold text-gray-800 hover:text-emerald-800">Articles & Educational Guides</button>
+            <button onclick="navigateTo('directory'); toggleMobileMenu();" class="block w-full text-left py-2 font-semibold text-gray-800 hover:text-emerald-800">Breed Directory & Pricing</button>
+            <button onclick="navigateTo('why-us'); toggleMobileMenu();" class="block w-full text-left py-2 font-semibold text-gray-800 hover:text-emerald-800">About Our Journal</button>
+        </div>
+    </header>
+    <main class="flex-grow">
+        <section id="sec-home" class="relative overflow-hidden py-12 lg:py-20 bg-gradient-to-b from-cream via-amber-50/40 to-cream">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold tracking-wide"><i class="fa-solid fa-graduation-cap text-amber-600"></i> The Complete Avian Knowledge Hub</div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-emerald-950 leading-tight">Master Chicken Raising & <br class="hidden sm:inline"/><span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-800 via-amber-600 to-amber-500">Explore Heritage Breeds</span></h1>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">Discover expert chicken husbandry guides and breed price directory.</p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <button onclick="navigateTo('articles')" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-bold shadow-xl shadow-emerald-900/20 transition-all hover:-translate-y-0.5 flex items-center justify-center gap-3"><i class="fa-solid fa-book-open"></i><span>Read Educational Articles</span></button>
+                            <button onclick="navigateTo('directory')" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-800 hover:bg-amber-500/20 font-bold transition-all flex items-center justify-center gap-2"><i class="fa-solid fa-list-check text-amber-600"></i><span>Browse Breed Directory</span></button>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-amber-500 to-emerald-700 opacity-30 blur-xl"></div>
+                            <div class="relative bg-white p-4 rounded-3xl shadow-2xl border border-amber-100">
+                                <span class="absolute top-7 left-7 px-3 py-1 rounded-full text-xs font-bold bg-amber-500 text-emerald-950 uppercase tracking-wider shadow-md">Editor's Pick Article</span>
+                                <img src="Rhode Island.jpg" alt="Featured" class="w-full h-72 object-cover rounded-2xl mb-4">
+                                <div class="p-2">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2 leading-snug">Preparing 5-Month-Old Pullets for Peak Egg Production</h3>
+                                    <button onclick="openArticleModal(1)" class="w-full py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2"><i class="fa-solid fa-newspaper"></i> Read Full Article</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sec-articles" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-amber-900/5">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 mt-1 mb-6">Chicken Raising Articles & Guides</h2>
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </section>
+        <section id="sec-directory" class="py-16 bg-white border-y border-amber-900/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 mt-1 mb-6 text-center">Chicken Breed Directory & Market Pricing</h2>
+                <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-8">
+                    <button onclick="filterAge('all')" id="tab-all" class="age-tab active px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-emerald-800 text-white shadow-md">All Stages & Ages</button>
+                    <button onclick="filterAge('4m')" id="tab-4m" class="age-tab px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white border border-gray-200 text-gray-700 hover:bg-emerald-50">4-Month-Old</button>
+                    <button onclick="filterAge('5m')" id="tab-5m" class="age-tab px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white border border-gray-200 text-gray-700 hover:bg-emerald-50">5-Month-Old</button>
+                    <button onclick="filterAge('6m')" id="tab-6m" class="age-tab px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white border border-gray-200 text-gray-700 hover:bg-emerald-50">6-Month & Older</button>
+                </div>
+                <div class="bg-cream p-4 sm:p-6 rounded-2xl border border-amber-900/10 mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="relative"><i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"></i><input type="text" id="search-input" onkeyup="handleFilterChange()" placeholder="Search breed name..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-800/30 text-sm"></div>
+                    <div><select id="breed-type-select" onchange="handleFilterChange()" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-800/30 text-sm text-gray-700 bg-white"><option value="all">All Breed Types</option></select></div>
+                    <div><select id="sort-select" onchange="handleFilterChange()" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-800/30 text-sm text-gray-700 bg-white"><option value="default">Sort By: Featured</option><option value="price-asc">Price: Low to High</option><option value="price-desc">Price: High to Low</option></select></div>
+                    <div><button onclick="resetFilters()" class="w-full py-2.5 rounded-xl bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm font-semibold transition-colors flex items-center justify-center gap-2"><i class="fa-solid fa-rotate-left"></i> Reset Filters</button></div>
+                </div>
+                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+                <div id="no-results" class="hidden text-center py-16 bg-cream rounded-2xl border border-dashed border-gray-300"><h3 class="text-xl font-bold text-gray-800">No Breeds Match</h3></div>
+            </div>
+        </section>
+    </main>
+    <div id="breed-modal" class="hidden fixed inset-0 z-50 bg-gray-950/60 p-4 sm:p-6 flex items-center justify-center" onclick="if (event.target === this) closeBreedModal()">
+        <section role="dialog" aria-modal="true" aria-labelledby="breed-modal-title" class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-2xl">
+            <button onclick="closeBreedModal()" aria-label="Close breed profile" class="absolute right-4 top-4 z-10 h-10 w-10 rounded-full bg-white/95 text-gray-700 shadow hover:bg-gray-100"><i class="fa-solid fa-xmark"></i></button>
+            <div id="breed-modal-content"></div>
+        </section>
+    </div>
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none"><div class="bg-emerald-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 border border-amber-400/30"><i class="fa-solid fa-circle-check text-amber-400 text-xl"></i><div><p id="toast-message" class="text-sm font-bold">Action Completed</p></div></div></div>
+    <script>
+        const CHICKEN_BREEDS = [
+            { id: 1, name: "Rhode Island Red", type: "Rhode Island Red", ageGroup: "5m", ageLabel: "5 Months (Point of Lay)", price: 2352.00, priceRange: "₱2128.00 - ₱2520.00", rating: 4.9, reviewsCount: 84, availability: "Reference Guide Available", image: "Rhode Island.jpg", description: "Famous for exceptional egg production.", eggRate: "260 - 300 Brown Eggs / Year", eggColor: "Rich Brown", temperament: "Friendly, Curious, Hardy", weight: "4.5 - 6.5 lbs", featherColor: "Deep Red Mahogany", hardiness: "Extreme Cold & Heat Tolerant", careInstructions: "Provide high-protein layer mash." },
+            { id: 2, name: "Ayam Cemani", type: "Ayam Cemani", ageGroup: "6m", ageLabel: "6 Months & Older", price: 10360.00, priceRange: "₱9800.00 - ₱12320.00", rating: 5.0, reviewsCount: 38, availability: "Rare Heritage Bloodline", image: "Houdan.jpg", description: "Ultra-rare Indonesian breed.", eggRate: "80 - 100 Cream Eggs / Year", eggColor: "Cream", temperament: "Docile, Active, Regal", weight: "4.0 - 5.5 lbs", featherColor: "Iridescent Beetle-Black", hardiness: "Prefers Moderate to Warm", careInstructions: "Requires warm roosting area." },
+            { id: 3, name: "Silkie Fluffy Bantam", type: "Silkie", ageGroup: "4m", ageLabel: "4 Months Old", price: 2128.00, priceRange: "₱1792.00 - ₱2240.00", rating: 4.8, reviewsCount: 112, availability: "Common Heritage", image: "Sebright.jpg", description: "Adorable, calm bantam breed.", eggRate: "100 - 120 Tinted Eggs / Year", eggColor: "Cream / Tinted", temperament: "Exceptionally Tame", weight: "2.0 - 3.0 lbs", featherColor: "Fluffy White & Cream", hardiness: "Requires Shelter", careInstructions: "Keep feathers dry." },
+            { id: 4, name: "Buff Orpington", type: "Buff Orpington", ageGroup: "5m", ageLabel: "5 Months (Point of Lay)", price: 2520.00, priceRange: "₱2240.00 - ₱2688.00", rating: 4.9, reviewsCount: 96, availability: "Reference Guide Available", image: "New Hampshire.jpg", description: "Golden-hued gentle giants.", eggRate: "200 - 280 Light Brown Eggs / Year", eggColor: "Light Brown", temperament: "Calm, Affectionate, Quiet", weight: "6.0 - 8.0 lbs", featherColor: "Warm Golden Buff", hardiness: "Cold Hardy", careInstructions: "Provide shade in summer." },
+            { id: 5, name: "Speckled Sussex", type: "Speckled Sussex", ageGroup: "6m", ageLabel: "6 Months & Older", price: 2912.00, priceRange: "₱2688.00 - ₱3248.00", rating: 4.7, reviewsCount: 45, availability: "Reference Guide Available", image: "Sussex.jpg", description: "English dual-purpose breed.", eggRate: "240 - 270 Large Tan Eggs / Year", eggColor: "Tan", temperament: "Curious, Friendly, Alert", weight: "6.0 - 7.5 lbs", featherColor: "Mahogany with White Dots", hardiness: "Extremely Cold Tolerant", careInstructions: "Thrives in free-range." },
+            { id: 6, name: "Black Australorp", type: "Black Australorp", ageGroup: "5m", ageLabel: "5 Months (Point of Lay)", price: 2464.00, priceRange: "₱2240.00 - ₱2576.00", rating: 4.9, reviewsCount: 71, availability: "Reference Guide Available", image: "Frizzle.jpg", description: "Australian record-holding breed.", eggRate: "280 - 320 Medium Brown Eggs / Year", eggColor: "Medium Brown", temperament: "Gentle, Heavy-built, Docile", weight: "5.5 - 7.0 lbs", featherColor: "Beetle-Green Black", hardiness: "All-Weather Hardy", careInstructions: "Provide nest box space." },
+            { id: 7, name: "Ameraucana Easter Egger", type: "Ameraucana", ageGroup: "4m", ageLabel: "4 Months Old", price: 2184.00, priceRange: "₱1960.00 - ₱2352.00", rating: 4.8, reviewsCount: 62, availability: "Popular Choice", image: "Polish.jpg", description: "Renowned for colourful eggs.", eggRate: "220 - 250 Blue / Green Eggs / Year", eggColor: "Sky Blue / Olive Green", temperament: "Energetic, Sweet, Docile", weight: "4.5 - 5.5 lbs", featherColor: "Varied Speckled", hardiness: "Cold & Heat Tolerant", careInstructions: "Ensure clean bedding." },
+            { id: 8, name: "Heritage Rhode Island Rooster", type: "Rhode Island Red", ageGroup: "6m", ageLabel: "6 Months & Older", price: 3080.00, priceRange: "₱2800.00 - ₱3640.00", rating: 4.6, reviewsCount: 29, availability: "Breeder Reference", image: "Dorking.jpg", description: "Vigorous male rooster.", eggRate: "N/A", eggColor: "N/A", temperament: "Protective, Alert, Dominant", weight: "7.5 - 8.5 lbs", featherColor: "Deep Crimson", hardiness: "High Stamina", careInstructions: "Provide space." }
+        ];
+        let state = { currentAgeFilter: 'all', currentArticleFilter: 'all', searchQuery: '', breedTypeFilter: 'all', sortBy: 'default' };
+        const productGrid = document.getElementById('product-grid');
+        const noResults = document.getElementById('no-results');
+        window.addEventListener('DOMContentLoaded', () => renderProducts());
+        function renderProducts() {
+            let filtered = CHICKEN_BREEDS.filter(item => {
+                const matchAge = state.currentAgeFilter === 'all' || item.ageGroup === state.currentAgeFilter;
+                const matchSearch = item.name.toLowerCase().includes(state.searchQuery.toLowerCase()) || item.description.toLowerCase().includes(state.searchQuery.toLowerCase());
+                const matchType = state.breedTypeFilter === 'all' || item.type === state.breedTypeFilter;
+                return matchAge && matchSearch && matchType;
+            });
+            if (state.sortBy === 'price-asc') filtered.sort((a,b)=>a.price-b.price);
+            else if (state.sortBy === 'price-desc') filtered.sort((a,b)=>b.price-a.price);
+            if (filtered.length === 0) { productGrid.innerHTML = ''; noResults.classList.remove('hidden'); }
+            else { noResults.classList.add('hidden'); productGrid.innerHTML = filtered.map(breed => createBreedCardHTML(breed)).join(''); }
+        }
+        function createBreedCardHTML(breed) {
+            return `<div class="bg-cream rounded-2xl overflow-hidden border border-amber-900/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div><div class="relative overflow-hidden bg-gray-100"><img src="${breed.image}" alt="${breed.name}" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"></div>
+                <div class="p-5"><h3 class="font-extrabold text-gray-900 text-lg leading-snug group-hover:text-emerald-800 transition-colors">${breed.name}</h3><p class="text-xs text-amber-700 font-semibold mb-3">${breed.type} · ${breed.ageLabel}</p><p class="text-gray-600 text-xs line-clamp-2 leading-relaxed mb-4">${breed.description}</p><dl class="grid grid-cols-2 gap-x-3 gap-y-2 border-t border-amber-900/10 pt-3 text-xs"><div><dt class="font-bold text-gray-500">Eggs</dt><dd class="mt-0.5 text-gray-800">${breed.eggRate}</dd></div><div><dt class="font-bold text-gray-500">Temperament</dt><dd class="mt-0.5 text-gray-800">${breed.temperament}</dd></div></dl></div></div>
+                <div class="px-5 pb-5 pt-0"><div class="bg-white p-3 rounded-xl border border-gray-200/80 mb-3 flex items-center justify-between"><div><span class="text-[10px] uppercase font-bold text-gray-400 block leading-tight">Est. Market Value</span><span class="text-xs font-bold text-gray-600">${breed.priceRange}</span></div><span class="text-xl font-black text-emerald-900">₱${breed.price.toFixed(2)}</span></div>
+                <button onclick="openBreedModal(${breed.id})" class="w-full py-2.5 px-3 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs transition-colors shadow-sm flex items-center justify-center gap-2"><i class="fa-solid fa-circle-info"></i> View Full Breed Profile & Guide</button></div></div>`;
+        }
+        function filterAge(age) { state.currentAgeFilter = age; renderProducts(); }
+        function handleFilterChange() { state.searchQuery = document.getElementById('search-input').value; state.breedTypeFilter = document.getElementById('breed-type-select').value; state.sortBy = document.getElementById('sort-select').value; renderProducts(); }
+        function resetFilters() { document.getElementById('search-input').value = ''; document.getElementById('breed-type-select').value = 'all'; document.getElementById('sort-select').value = 'default'; state.searchQuery = ''; state.breedTypeFilter = 'all'; state.sortBy = 'default'; filterAge('all'); }
+        function focusSearch() { const input = document.getElementById('search-input'); if (input) input.focus(); }
+        function openBreedModal(id) {
+            const breed = CHICKEN_BREEDS.find(item => item.id === id);
+            if (!breed) return;
+            const details = [
+                ['Breed', breed.type], ['Age', breed.ageLabel], ['Egg production', breed.eggRate],
+                ['Egg color', breed.eggColor], ['Temperament', breed.temperament], ['Typical weight', breed.weight],
+                ['Feather color', breed.featherColor], ['Hardiness', breed.hardiness], ['Care', breed.careInstructions]
+            ];
+            document.getElementById('breed-modal-content').innerHTML = `<div class="relative bg-gray-100 h-56 sm:h-64"><img src="${breed.image}" alt="${breed.name}" class="w-full h-full object-cover"></div><div class="p-5 sm:p-7"><p class="text-xs font-bold uppercase text-amber-700">${breed.availability}</p><h2 id="breed-modal-title" class="mt-1 text-2xl font-extrabold text-gray-900">${breed.name}</h2><p class="mt-2 mb-6 text-sm leading-relaxed text-gray-600">${breed.description}</p><dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 border-t border-gray-200">${details.map(([label, value]) => `<div class="border-b border-gray-100 py-3"><dt class="text-xs font-bold uppercase text-gray-500">${label}</dt><dd class="mt-1 text-sm text-gray-800">${value}</dd></div>`).join('')}</dl><div class="mt-5 flex flex-wrap items-end justify-between gap-3 border-t border-gray-200 pt-4"><div><span class="block text-[10px] font-bold uppercase text-gray-400">Estimated market price</span><span class="text-2xl font-black text-emerald-900">₱${breed.price.toFixed(2)}</span><span class="block text-xs text-gray-500">Range: ${breed.priceRange}</span></div><span class="text-sm text-amber-700"><i class="fa-solid fa-star mr-1"></i>${breed.rating} (${breed.reviewsCount} references)</span></div></div>`;
+            document.getElementById('breed-modal').classList.remove('hidden');
+        }
+        function closeBreedModal() { document.getElementById('breed-modal').classList.add('hidden'); }
+        document.addEventListener('keydown', event => { if (event.key === 'Escape') closeBreedModal(); });
+        function navigateTo(sectionId) { const target = document.getElementById('sec-'+sectionId); if (target) target.scrollIntoView({ behavior: 'smooth' }); }
+        function toggleMobileMenu() { const menu = document.getElementById('mobile-menu'); const isOpen = menu.classList.toggle('hidden') === false; document.querySelector('[aria-controls="mobile-menu"]').setAttribute('aria-expanded', String(isOpen)); }
+        function showToast(msg) { const toast = document.getElementById('toast'); document.getElementById('toast-message').innerText = msg; toast.classList.remove('translate-y-20','opacity-0'); toast.classList.add('translate-y-0','opacity-100'); setTimeout(()=>{toast.classList.remove('translate-y-0','opacity-100');toast.classList.add('translate-y-20','opacity-0');},3000); }
+    </script>
+</body>
+</html>
